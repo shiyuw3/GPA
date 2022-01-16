@@ -10,7 +10,7 @@ GPA is a performance advisor for NVIDIA GPUs that suggests potential code optimi
 ```bash
 git clone --recursive https://github.com/Jokeren/GPA.git && cd GPA
 ./bin/install.sh
-./bin/bench.sh rodinia/bfs
+./bin/bench.sh -c GPA-Benchmark/rodinia/bfs
 ```
 
 ## Documentation

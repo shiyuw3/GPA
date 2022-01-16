@@ -200,7 +200,8 @@ def setup(case_name, arch):
     ret = []
     if case_name.find('rodinia') != -1:
         if case_name.find('/') != -1:
-            sub_case_name = case_name.split('/')[1]
+            # sub_case_name = case_name.split('/')[1]
+            sub_case_name = case_name.split('/')[2]
             for test_case in rodinia_test_cases:
                 if test_case.name == sub_case_name:
                     ret.append(test_case)
@@ -499,7 +500,7 @@ def advise(test_cases, arch, origin):
             else:
                 pipe_read(opts + [test_case.command] + test_case.options)
             time_end = time.time()
-            
+
             if VERBOSE:
                 print("elapsed: {}".format(time_end - time_start))
 
